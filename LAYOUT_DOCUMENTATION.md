@@ -129,18 +129,22 @@ DashboardScreen
 - Pull-to-refresh: 58–60 FPS
 ---
 ## Challenges Encountered and Solutions
-### Challenge 1: [Challenge Title]
-**Problem:** [Describe the problem]
-**Solution:** [Describe how you solved it]
-**Learning:** [What you learned]
-### Challenge 2: [Challenge Title]
-**Problem:** [Describe the problem]
-**Solution:** [Describe how you solved it]
-**Learning:** [What you learned]
-### Challenge 3: [Challenge Title]
-**Problem:** [Describe the problem]
-**Solution:** [Describe how you solved it]
-**Learning:** [What you learned]
+
+### Challenge 1: Project Structure and File Opening
+**Problem:** When opening the parent folder containing multiple React Native projects, errors occurred such as issues in `build.gradle` and module conflicts.  
+**Solution:** I ensured that only the project folder itself was opened in the IDE (VSCode), which prevented these configuration errors.  
+**Learning:** I learned the importance of working in the correct project root folder and how React Native projects depend on accurate paths for build files.
+
+### Challenge 2: App.js vs App.tsx Behavior
+**Problem:** I was confused about how React Native handled `App.js` and `App.tsx` simultaneously, which sometimes caused unexpected rendering behavior.  
+**Solution:** I kept both files in the project, understanding that React Native automatically chooses the correct entry point depending on configuration.  
+**Learning:** I learned how React Native resolves entry files and the differences in handling JS vs TS files.
+
+### Challenge 3: Module Linking and Icon Issues
+**Problem:** Icons from `react-native-vector-icons` showed as `?` on the screen because modules were not linked correctly.  
+**Solution:** I reinstalled the modules and ran `pod install` for iOS. For Android, I ensured the fonts were copied into `android/app/src/main/assets/fonts` and rebuilt the app.  
+**Learning:** I learned how to troubleshoot module integration issues, the use of `pod install`, and the manual steps needed for vector icons to work on Android and iOS.
+
 ---
 ## Testing Results
 ### Device Testing Matrix
@@ -154,38 +158,43 @@ DashboardScreen
 | Pixel Tablet| 1600x2560 | Portrait | 3 | ✅ Pass |
 
 ### Functionality Testing
-- [ ] Responsive grid adjusts to screen size ✅
-- [ ] Orientation changes handled correctly ✅
-- [ ] Pull-to-refresh works smoothly ✅
-- [ ] All widgets display correctly ✅
-- [ ] Platform-specific styling applied ✅
-- [ ] Performance maintained at 60fps ✅
+- [x] Responsive grid adjusts to screen size ✅
+- [x] Orientation changes handled correctly ✅
+- [x] Pull-to-refresh works smoothly ✅
+- [x] All widgets display correctly ✅
+- [x] Platform-specific styling applied ✅
+- [x] Performance maintained at 60fps ✅
 
-- [ ] Accessibility labels present ✅
-- [ ] No console errors or warnings ✅
+- [x] Accessibility labels present ✅
+- [x] No console errors or warnings ✅
 ---
 ## Code Quality Checklist
-- [ ] All components properly commented
-- [ ] Consistent naming conventions used
-- [ ] No unused imports or variables
-- [ ] Proper file organization
-- [ ] ESLint rules followed
-- [ ] Code formatted with Prettier
-- [ ] No hardcoded values (using theme system)
-- [ ] Accessibility props included
+- [x] All components properly commented ✅
+- [x] Consistent naming conventions used ✅
+- [x] No unused imports or variables ✅
+- [x] Proper file organization ✅
+- [x] ESLint rules followed ✅
+- [x] Code formatted with Prettier ✅
+- [x] No hardcoded values (using theme system) ✅
+- [x] Accessibility props included ✅
+
 ---
 ## Reflection
 ### What I Learned
-[Write 150-200 words about what you learned from this lab]
+I encountered several challenges while working with React Native, which helped me deepen my understanding of project structure and module management. One issue was opening the wrong folder in the IDE: if I opened the parent folder containing multiple projects, it caused errors in files like build.gradle. I learned that it’s important to open only the specific project folder to avoid these conflicts. Another challenge was understanding how App.js and App.tsx interact. I discovered that React Native can render either file, and it’s possible to keep both in the project while ensuring the correct entry point is used. 
+
+I also encountered problems with third-party modules, such as icons not displaying correctly. This was resolved by running ‘npx react-native link’ and ‘pod install’, which properly connected the native modules. Through these experiences, I learned the importance of proper folder management, module linking, and careful attention to platform-specific setup. Troubleshooting these issues improved my confidence in debugging React Native projects and reinforced best practices for project organizations. 
 ### Skills Gained
 - Responsive design for mobile applications
 - Flexbox mastery for complex layouts
 - Platform-specific styling techniques
 - Performance optimization strategies
-- [Other skills]
+
 ### Areas for Improvement
-[Honest assessment of what you'd like to improve]
+While the project is functional, there are areas I want to improve. I’d like to refine spacing and layout margins to ensure components fit perfectly across all devices, especially tablets. I also want to deepen my understanding of responsive typography scaling and make the widget system even more reusable. Additionally, I aim to improve automated testing and accessibility coverage for all components.
+
 ### Application to Future Projects
-[How will you use these skills in future work?]
+The skills learned from this project—managing responsive layouts, handling orientation changes, linking native modules, and troubleshooting build issues—will help me build more robust React Native applications in the future. I now have a clearer workflow for project setup, module integration, and performance optimization. These lessons will be applied to create scalable, maintainable, and accessible mobile apps in future projects.
+
 ---
 **End of Documentation**
