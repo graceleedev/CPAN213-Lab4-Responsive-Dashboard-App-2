@@ -101,6 +101,7 @@ The spacing system uses percentages of screen width to maintain proportional gap
 The dashboard uses a modular **widget system** to maintain consistency and maximize reusability across different screens.  
 
 ### Component Hierarchy
+```
 DashboardScreen
 ├── DashboardHeader
 │ ├── Menu Button
@@ -109,7 +110,8 @@ DashboardScreen
 ├── ResponsiveGrid
 │ └── StatisticWidgets (4x)
 └── BaseWidget
-└── Quick Actions (4x)
+  └── Quick Actions (4x)
+```
 ---
 ## Performance Optimizations Applied
 ### StyleSheet Optimization
@@ -184,6 +186,7 @@ DashboardScreen
 I encountered several challenges while working with React Native, which helped me deepen my understanding of project structure and module management. One issue was opening the wrong folder in the IDE: if I opened the parent folder containing multiple projects, it caused errors in files like build.gradle. I learned that it’s important to open only the specific project folder to avoid these conflicts. Another challenge was understanding how App.js and App.tsx interact. I discovered that React Native can render either file, and it’s possible to keep both in the project while ensuring the correct entry point is used. 
 
 I also encountered problems with third-party modules, such as icons not displaying correctly. This was resolved by running ‘npx react-native link’ and ‘pod install’, which properly connected the native modules. Through these experiences, I learned the importance of proper folder management, module linking, and careful attention to platform-specific setup. Troubleshooting these issues improved my confidence in debugging React Native projects and reinforced best practices for project organizations. 
+
 ### Skills Gained
 - Responsive design for mobile applications
 - Flexbox mastery for complex layouts

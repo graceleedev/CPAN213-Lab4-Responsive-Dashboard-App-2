@@ -31,6 +31,7 @@ responsive design patterns, and platform-specific styling in React Native.## Fea
 5. Run on iOS: `npx react-native run-ios`
 
 ## Project Structure
+```
 src/
 ├── components/
 │ ├── DashboardHeader.js
@@ -43,7 +44,8 @@ src/
 ├── styles/
 │ └── theme.js
 └── utils/
-└── responsive.js
+  └── responsive.js
+```
 
 ## Responsive Breakpoints
 - Small phones: < 350px
